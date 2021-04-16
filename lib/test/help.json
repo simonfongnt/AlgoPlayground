@@ -1,0 +1,126 @@
+{
+    "help":[
+        "INFO:",
+        "model test",
+        "USAGE:",
+        "test option [source] [operation]",
+        "Option:",
+        "-h, help           display this file",
+        "-M, modules        display list of modules",
+        "-m, module         import module",
+        "-s, save           save model",
+        "-L, list           display list of models",
+        "-l, load           load model",
+        "-i, init           initialize test",
+        "-t, test           test model",
+        "-a, analysis       analysis AlgoModel",
+        "-e, export         export AlgoModel",
+        "info               display module info",
+        "run                perform model test",
+        "                   other unspecified options are sent to the loaded module",
+        "Source:",
+        "<index>            index of list command",
+        "<file>             actual filename",
+        "Operation:",
+        "-h, help           display help for option",
+        ""
+    ],
+    "modules":[
+        "INFO:",
+        "display list of module in lib.test directory",
+        "USAGE:",
+        "test -M|modules",
+        "OUTPUT:",
+        "index:path         list of module path with reference index",
+        "Source:",
+        "<index>            index of module, for module command",
+        "<path>             specific module path in lib.test directory",
+        ""
+    ],
+    "module":[
+        "INFO:",
+        "import module (last module without source) from lib.test directory",
+        "USAGE:",
+        "test -m|module [source]",
+        "Source:",
+        "<index>            <index> of modules command result",
+        "<file>             specific module file name in lib.test directory",
+        ""
+    ],
+    "save":[
+        "INFO:",
+        "save model to destination (default: model directory)",
+        "USAGE:",
+        "test -s|save [destination]",
+        "Destination:",
+        "<path>             folder path'",
+        ""
+    ],
+    "list":[
+        "INFO:",
+        "display list of models in model directory",
+        "USAGE:",
+        "test -L|list",
+        "OUTPUT:",
+        "index:path         list of model paths with reference index",
+        "Source:",
+        "<index>            index of model, for load command",
+        "<path>             specific model path in model directory",
+        ""
+    ],
+    "load":[
+        "INFO:",
+        "load model (last model without source) from model directory",
+        "USAGE:",
+        "test -l|load [source]",
+        "Source:",
+        "<index>            <index> of list command result",
+        "<file>             specific model file name in model directory",
+        ""
+    ],
+    "init":[
+        "INFO:",
+        "initialize model with loaded dataset and module",
+        "USAGE:",
+        "test -i|init",
+        ""
+    ],
+    "test":[
+        "INFO:",
+        "perform model test",
+        "USAGE:",
+        "test -t|test",
+        ""
+    ],
+    "info":[
+        "INFO:",
+        "display info hardcoded in module",
+        "USAGE:",
+        "test info",
+        ""
+    ],
+    "analysis":[
+        "INFO:",
+        "analysis AlgoModel",
+        "USAGE:",
+        "test -a|analysis",
+        ""
+    ],
+    "export":[
+        "INFO:",
+        "export AlgoModel to dist directory",
+        "USAGE:",
+        "test -e|export [operation...]",
+        "Operation:",
+        "<parameters>       fine-tune parameters",
+        ""
+    ],
+    "run":[
+        "INFO:",
+        "model test with default setting",
+        "included initialization, testing and saving",
+        "USAGE:",
+        "test run",
+        ""
+    ]
+}

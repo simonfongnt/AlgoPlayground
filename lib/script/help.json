@@ -1,0 +1,61 @@
+{
+    "help":[
+        "Welcome to AlgoPlayground",
+        "USAGE:",
+        "data option ...    dataset preprocessing, data -h for more info",
+        "model option ...   model creation, model -h for more info",
+        "test option ...    model test, test -h for more info",
+        "kill option ...    kill running thread, kill -h for more info",
+        "script option ...  automation, script -h for more info",
+        ""
+    ],
+    "script":[
+        "INFO:",
+        "Script automation",
+        "USAGE:",
+        "script options [source] [target] [operation]",
+        "Option:",
+        "-h, help           display this file",
+        "-L, list           list of scripts",
+        "run                execute script",
+        "Source:",
+        "<index>            index of list command",
+        "<file>             actual filename",
+        "Operation:",
+        "-h, help           display help for option",
+        ""
+    ],
+    "list":[
+        "INFO:",
+        "display list of scripts in script directory",
+        "USAGE:",
+        "script -L|list",
+        "OUTPUT:",
+        "index:path         list of script path with reference index",
+        "Source:",
+        "<index>            index of script, for 'script run <index>'",
+        "<path>             specific script path in script directory",
+        ""
+    ],
+    "run":[
+        "INFO:",
+        "execute script (last script without source) from script directory",
+        "USAGE:",
+        "script run [source]",
+        "Source:",
+        "<index>            index of list command result",
+        "<file>             specific script file name in script directory",
+        ""
+    ],
+    "kill":[
+        "INFO:",
+        "kill running thread",
+        "USAGE:",
+        "script kill target",
+        "Target:",
+        "data               data thread",
+        "model              model thread",
+        "test               test thread",
+        ""
+    ]
+}
