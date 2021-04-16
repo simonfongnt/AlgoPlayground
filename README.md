@@ -129,3 +129,5 @@ print(model.Info())
 result = model.Predict([123, 234, 345, 456])    
 # False
 ```
+## Telegram (Optional)
+Update the details in `config/login.json` to remote control the program via Telegram. 
