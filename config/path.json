@@ -1,0 +1,67 @@
+{
+	"login": 		"config/login.json",
+	"logpath": 		[
+		"log",
+		"%s.log"
+	],
+	"data":		{
+		"libroot":	[
+			"lib", 
+			"data"
+		],
+		"rawroot":	[
+			"data", 
+			"raw"
+		],
+		"dataroot":	[
+			"data"
+		],
+		"miscroot":	[
+			"misc"
+		]
+	},
+	"model":		{
+		"libroot":	[
+			"lib", 
+			"model"
+		],
+		"modelroot":[
+			"model", 
+			"tmp"
+		],
+		"distroot":	[
+			"model"
+		],
+		"miscroot":	[
+			"misc"
+		]
+	},
+	"test":		{
+		"libroot":	[
+			"lib", 
+			"test"
+		],
+		"tmproot":[
+			"model", 
+			"tmp"
+		],
+		"modelroot":[
+			"model"
+		],
+		"distroot":	[
+			"dist"
+		],
+		"miscroot":	[
+			"misc"
+		]
+	},
+	"ioHub":		{
+		"libroot":	[
+			"lib", 
+			"script"
+		],
+		"scriptroot":	[
+			"script"
+		]
+	}
+}

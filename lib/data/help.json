@@ -1,0 +1,136 @@
+{
+    "help":[
+        "INFO:",
+        "dataset preprocessing",
+        "USAGE:",
+        "model option [source] [operation]",
+        "Option:",
+        "-h, help           display this file",
+        "-M, modules        display list of modules",
+        "-m, module         import module",
+        "-R, raws           display list of module",
+        "-r, raw            load raw data",
+        "-s, save           save dataset",
+        "-L, list           display list of datasets",
+        "-l, load           load dataset",
+        "-t, to             send dataset to other function",
+        "-c, create         create dataset from raw",
+        "info               display module info",
+        "run                convert raw data to dataset",
+        "                   other unspecified options are sent to the loaded module",
+        "Source:",
+        "<index>            index of list command",
+        "<file>             actual filename",
+        "Operation:",
+        "-h, help           display help for option",
+        ""
+    ],
+    "modules":[
+        "INFO:",
+        "display list of module in lib.data directory",
+        "USAGE:",
+        "data -M|modules",
+        "OUTPUT:",
+        "index:path         list of module path with reference index",
+        "Source:",
+        "<index>            index of module, for module command",
+        "<path>             specific module path in lib.data directory",
+        ""
+    ],
+    "module":[
+        "INFO:",
+        "import module (last module without source) from lib.data directory",
+        "USAGE:",
+        "data -m|module [source]",
+        "Source:",
+        "<index>            <index> of modules command result",
+        "<file>             specific module file name in lib.data directory",
+        ""
+    ],
+    "raws":[
+        "INFO:",
+        "display list of raw data in data.raw directory",
+        "USAGE:",
+        "data -R|raws",
+        "OUTPUT:",
+        "index:path         list of raw data path with reference index",
+        "Source:",
+        "<index>            index of raw data, for raw command",
+        "<path>             specific raw data path in data.raw directory",
+        ""
+    ],
+    "raw":[
+        "INFO:",
+        "load raw data (last raw data without source) from data.raw directory",
+        "USAGE:",
+        "data -r|raw [source]",
+        "Source:",
+        "<index>            <index> of raws command result",
+        "<file>             specific raw file name in data.raw directory",
+        ""
+    ],
+    "save":[
+        "INFO:",
+        "save dataset to destination (default: data directory)",
+        "USAGE:",
+        "data -s|save [destination]",
+        "Destination:",
+        "<path>             folder path'",
+        ""
+    ],
+    "list":[
+        "INFO:",
+        "display list of dataset in data directory",
+        "USAGE:",
+        "data -L|list",
+        "OUTPUT:",
+        "index:path         list of dataset path with reference index",
+        "Source:",
+        "<index>            index of dataset, for load command",
+        "<path>             specific dataset path in data directory",
+        ""
+    ],
+    "load":[
+        "INFO:",
+        "load dataset (last dataset without source) from data directory",
+        "USAGE:",
+        "data -l|load [source]",
+        "Source:",
+        "<index>            <index> of list command result",
+        "<file>             specific dataset file name in data directory",
+        ""
+    ],
+    "to":[
+        "INFO:",
+        "send dataset to other function",
+        "USAGE:",
+        "data -t|to function",
+        "function:",
+        "model              model function",
+        "test               test function",
+        ""
+    ],
+    "create":[
+        "INFO:",
+        "create dataset from raw",
+        "USAGE:",
+        "model -c|create",
+        ""
+    ],
+    "info":[
+        "INFO:",
+        "display info hardcoded in module",
+        "USAGE:",
+        "data info",
+        ""
+    ],
+    "run":[
+        "INFO:",
+        "dataset creation with default setting,",
+        "convert raw data to dataset and save it to data directory,",
+        "then pass the dataset to train and test functions.",
+        "USAGE:",
+        "data run",
+        ""
+    ]
+}

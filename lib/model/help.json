@@ -1,0 +1,127 @@
+{
+    "help":[
+        "INFO:",
+        "model creation",
+        "USAGE:",
+        "model option [source] [operation]",
+        "Option:",
+        "-h, help           display this file",
+        "-M, modules        display list of modules",
+        "-m, module         import module",
+        "-s, save           save model",
+        "-L, list           display list of models",
+        "-l, load           load model",
+        "-i, init           initialize model",
+        "-c, compile        compile model",
+        "-f, fit            fit model",
+        "-t, to             send model to other function",
+        "info               display module info",
+        "run                perform model training",
+        "                   other unspecified options are sent to the loaded module",
+        "Source:",
+        "<index>            index of list command",
+        "<file>             actual filename",
+        "Operation:",
+        "-h, help           display help for option",
+        ""
+    ],
+    "modules":[
+        "INFO:",
+        "display list of module in lib.model directory",
+        "USAGE:",
+        "model -M|modules",
+        "OUTPUT:",
+        "index:path         list of module path with reference index",
+        "Source:",
+        "<index>            index of module, for module command",
+        "<path>             specific module path in lib.model directory",
+        ""
+    ],
+    "module":[
+        "INFO:",
+        "import module (last module without source) from lib.model directory",
+        "USAGE:",
+        "model -m|module [source]",
+        "Source:",
+        "<index>            <index> of modules command result",
+        "<file>             specific module file name in lib.model directory",
+        ""
+    ],
+    "save":[
+        "INFO:",
+        "save model to destination (default: model.tmp directory)",
+        "USAGE:",
+        "model -s|save [destination]",
+        "Destination:",
+        "<path>             folder path'",
+        ""
+    ],
+    "list":[
+        "INFO:",
+        "display list of models in model directory",
+        "USAGE:",
+        "model -L|list",
+        "OUTPUT:",
+        "index:path         list of model paths with reference index",
+        "Source:",
+        "<index>            index of model, for load command",
+        "<path>             specific model path in model directory",
+        ""
+    ],
+    "load":[
+        "INFO:",
+        "load model (last model without source) from model directory",
+        "USAGE:",
+        "model -l|load [source]",
+        "Source:",
+        "<index>            <index> of list command result",
+        "<file>             specific model file name in model directory",
+        ""
+    ],
+    "init":[
+        "INFO:",
+        "initialize model with loaded dataset and module",
+        "USAGE:",
+        "model -i|init",
+        ""
+    ],
+    "compile":[
+        "INFO:",
+        "compile model with initialized model",
+        "USAGE:",
+        "model -c|compile",
+        ""
+    ],
+    "fit":[
+        "INFO:",
+        "fit model with initialized and compiled model",
+        "USAGE:",
+        "model -f|fit",
+        ""
+    ],
+    "to":[
+        "INFO:",
+        "send model path in model.tmp directory to other function",
+        "USAGE:",
+        "model -t|to function",
+        "function:",
+        "test               test function",
+        ""
+    ],
+    "info":[
+        "INFO:",
+        "display info hardcoded in module",
+        "USAGE:",
+        "model info",
+        ""
+    ],
+    "run":[
+        "INFO:",
+        "train the model with default setting",
+        "including initialization, creation, compile and fitting",
+        "then pass the trained model to test function",
+        "USAGE:",
+        "model run",
+        ""
+    ]
+}

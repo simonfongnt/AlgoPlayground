@@ -1,0 +1,5 @@
+model module
+data to model
+model create
+model compile
+model fit

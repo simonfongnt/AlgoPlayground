@@ -1,0 +1,16 @@
+data module DATA_SAMPLE
+model module SKLEARN_SVC_SAMPLE
+test module SKLEARN_SVC_SAMPLE
+data raw RAWSAMPLE
+data create
+data save 0.25 0
+data to model
+data to test
+model create
+model compile
+model fit
+model to test
+test run
+test save
+#test analysis
+#test export
