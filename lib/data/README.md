@@ -1,4 +1,4 @@
-# USAGE
+# Data Thread Modules
 
 Data processing modules are located in this folder `lib/data/` and the raw data are located in `data/raw/`. 
 > 1. Raw data at `data/raw/`
@@ -48,21 +48,25 @@ class Data(
         self.y          = []
         self.dataPack   = {}
 ```
-## Parameters
+## Give and Take
 Data Thread passes numbers of parameters to the mobules and expects specific parameters for Model & Test threads.
 ```
 Core Params:
-self.filepath       # module path
-self.filename       # file name of the module 
-self.classname      # class name of the module
+self.filepath       # string, module path
+self.filename       # string, file name of the module 
+self.classname      # string, class name of the module
 
-Computed Params:
-self.x              # computed features dataframe
-self.y              # computed target dataframe
-self.dataPack       # optional dictionary to Model & Test thread modules
+Available Functions:
+self.xprint()       # display on console and messenger api
+                    # e.g. self.xprint('123', '234')
+
+Expected Params:
+self.x              # dataframe, computed features 
+self.y              # dataframe, computed target
+self.dataPack       # dictionary, to Model & Test thread modules
 ```
 
-## Example
+## Example: create datasets
 `DATA_SAMPLE.py` uses the raw data at `data/raw/RAWSAMPLE/ABC.csv`.
 1. Use `data modules` to list the data module
 ```
@@ -80,3 +84,29 @@ data/raw:
 4. Use `data raw 4` to pass raw directory path to module Class `Raw`
 5. Use `data create` to compute `self.x`, `self.y` and `self.dataPack`
 6. Use `data save` to create train set, validate set and test set files in `data/`
+> WARNING: `data save` will remove and create all files in the folder.
+7. Use `data to model` to pass the train set & validate set to Model thread
+8. Use `data to test` to pass the test set to Test thread
+> NOTE: `data to` requires modules to be load in Target threads.
+
+## Example: load existing datasets
+Assume the datasets have been created by `DATA_SAMPLE.py`, the existing datasets can be reused.
+1. Use `data modules` to list the data module
+```
+lib/data:
+0:lib/data/DATA_SAMPLE.py
+```
+2. Use `data module 0` to load the example module
+3. Use `data list` to list the dataset directories in `data/`
+```
+data:
+...
+4:data/DATA_SAMPLE
+...
+```
+4. Use `data load 4` to load the previous train set, validate set and test set files
+5. Use `data create` to compute `self.x`, `self.y` and `self.dataPack`
+6. Use `data save` to create train set, validate set and test set files in `data/`
+7. Use `data to model` to pass the train set & validate set to Model thread
+8. Use `data to test` to pass the test set to Test thread
+> NOTE: `data to` requires modules to be load in Target threads.
