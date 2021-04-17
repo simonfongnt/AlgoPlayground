@@ -1,6 +1,17 @@
 # Welcome to AlgoPlayground
 This is a project template for machine learning. Machine learning requires data processing, model training and testing. During the development, any issues/changes to code would consume a great amount of time. This template allows code changes while the result/params persist. 
 
+# Requirements
+```
+tensorflow
+pandas
+python-telegram-bot
+scikit-learn
+sqlalchemy
+matlotlib
+pyarrow
+```
+
 ## Structure
 Data processing requires raw files located in `data/raw/` and code in `lib/data/`. Model Trainning code are in `lib/model/`. Model Test codes are in `lib/test/`. After the preprocessing, dataset will be stored in `data/` separated in train set, validation set and test set. Model Training accepts the train set (and validation set) to train and save the model to `model/tmp`. Model Test collects the test set and trained model to run the test and save in `model/`. Once the model is good, it can be exported as Algomodel to `dist/`.
 
