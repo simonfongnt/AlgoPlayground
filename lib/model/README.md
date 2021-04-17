@@ -8,12 +8,12 @@ Model Thread handles import of these modules by `model module` command. For more
 
 Basically, class `Raw` and `Create` are essential during the development.
 
-## Data module (Data Processing) Class Format
-`lib.moduleCore.DataBase` must be inherited in `class Data`. The mininal template is defined as follows:
+## Model module (Model Trainning) Class Format
+`lib.moduleCore.ModelBase` must be inherited in `class Model`. The mininal template is defined as follows:
 ```
 from lib.moduleCore import ModelBase
 from lib.kerasTools import KerasTools   # for Keras model
-class Data(
+class Model(
     ModelBase,
     KerasTools,                         # for Keras model
     ):
@@ -84,7 +84,7 @@ self.modelPack      # optional dictionary to Test thread module
 ```
 
 ## Example: create and train a model
-`KERAS_NN_SAMPLE.py` uses the dataset from `DATA_SAMPLE.py` Data thread module.
+`SKLEARN_SVC_SAMPLE.py` uses the dataset from `DATA_SAMPLE.py` Data thread module.
 1. Use `model modules` to list the data module
 ```
 lib/model:
@@ -94,14 +94,14 @@ lib/model:
 ```
 2. Use `model module 2` to load the example module
 3. [Create / Load Datasets](lib/data/README.md)
-4. Use `data save 0.25 0.25` to ensure validate set (25% of train set) exists
-5. Use `data to model` to obtain train set and validate set
+4. Use `data save 0.25 0` to ensure no validate set exists
+5. Use `data to model` to obtain train set
 6. Use `model create` to create the model (optional)
 7. Use `model compile` to compile the model (optional)
 8. Use `model fit` to train the model and save to `model/tmp`
 
 ## Example: load existing model
-`KERAS_NN_SAMPLE.py` uses the dataset from `DATA_SAMPLE.py` Data thread module.
+`SKLEARN_SVC_SAMPLE.py` uses the dataset from `DATA_SAMPLE.py` Data thread module.
 1. Use `model modules` to list the data module
 ```
 lib/model:
@@ -114,7 +114,7 @@ lib/model:
 ```
 model:
 ...
-4:model/KERAS_NN_SAMPLE
+4:model/SKLEARN_SVC_SAMPLE
 ...
 ```
 4. Use `model load 4` to load previous trained and tested model in `data/`

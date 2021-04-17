@@ -87,7 +87,7 @@ data/raw:
 > WARNING: `data save` will remove and create all files in the folder.
 7. Use `data to model` to pass the train set & validate set to Model thread
 8. Use `data to test` to pass the test set to Test thread
-> NOTE: `data to` requires modules to be load in Target threads.
+> NOTE: `data to` requires modules to be loaded in target threads.
 
 ## Example: load existing datasets
 Assume the datasets have been created by `DATA_SAMPLE.py`, the existing datasets can be reused.
@@ -109,4 +109,4 @@ data:
 6. Use `data save` to create train set, validate set and test set files in `data/`
 7. Use `data to model` to pass the train set & validate set to Model thread
 8. Use `data to test` to pass the test set to Test thread
-> NOTE: `data to` requires modules to be load in Target threads.
+> NOTE: `data to` requires modules to be loaded in target threads.
