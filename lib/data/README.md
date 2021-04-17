@@ -1,0 +1,82 @@
+# USAGE
+
+Data processing modules are located in this folder `lib/data/` and the raw data are located in `data/raw/`. 
+> 1. Raw data at `data/raw/`
+>     - e.g. `data/raw/RAWSAMPLE/ABC.csv``
+
+Data Thread handles import of these modules by `data module` command. For more infomation, Use `data module help` or read this (pending).
+
+Basically, class `Raw` and `Create` are essential during the development.
+
+## Data module (Data Processing) Class Format
+`lib.moduleCore.DataBase` must be inherited in `class Data`. The mininal template is defined as follows:
+```
+from lib.moduleCore import DataBase
+class Data(
+    DataBase,
+    ):
+
+    filepath    = sys._getframe().f_code.co_filename
+    filename    = filepath.split(os.sep)[-1]
+    classname   = sys._getframe().f_code.co_name
+
+    # line by line string that reports to "data info" command
+    info = []
+
+    # line by line string that reports to "help" command
+    helpinfo = {}
+
+    def __init__(self,):
+        DataBase.__init__(self)
+
+    # module command passed by Data Thread
+    def Command(self, cmds,):
+        pass
+
+    # Raw Directory is selected in Data Thread and pass to here
+    def Raw(
+        self,
+        dir,    
+        ):
+        pass
+    
+    # default Create function be called by Data Thread
+    def Create(
+        self,
+        ):
+        self.x          = []
+        self.y          = []
+        self.dataPack   = {}
+```
+## Parameters
+Data Thread passes numbers of parameters to the mobules and expects specific parameters for Model & Test threads.
+```
+Core Params:
+self.filepath       # module path
+self.filename       # file name of the module 
+self.classname      # class name of the module
+
+Computed Params:
+self.x              # computed features dataframe
+self.y              # computed target dataframe
+self.dataPack       # optional dictionary to Model & Test thread modules
+```
+
+## Example
+`DATA_SAMPLE.py` uses the raw data at `data/raw/RAWSAMPLE/ABC.csv`.
+1. Use `data modules` to list the data module
+```
+lib/data:
+0:lib/data/DATA_SAMPLE.py
+```
+2. Use `data module 0` to load the example module
+3. Use `data raws` to list the raw directories in `data/raw`
+```
+data/raw:
+...
+4:data/raw/RAWSAMPLE
+...
+```
+4. Use `data raw 4` to pass raw directory path to module Class `Raw`
+5. Use `data create` to compute `self.x`, `self.y` and `self.dataPack`
+6. Use `data save` to create train set, validate set and test set files in `data/`
