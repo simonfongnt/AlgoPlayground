@@ -1,16 +1,32 @@
-data module DATA_SAMPLE         # load DATA_SAMPLE.py in lib/data/
-model module KERAS_NN_SAMPLE    # load KERAS_NN_SAMPLE.py in lib/model/
-test module KERAS_NN_SAMPLE     # load KERAS_NN_SAMPLE.py in lib/test/
-data raw RAWSAMPLE              # load RAWSAMPLE folder in data/raw/
-data create                     # create dataset from raw
-data save 0.25 0.25             # save datasets to data/DATA_SAMPLE/
-data to model                   # share dataset to model module
-data to test                    # share dataset to test module
-model create                    # create model
-model compile                   # compile model
-model fit                       # train model & save to model/tmp
-model to test                   # share model to test module
-test run                        # run model test
-test save                       # save model to model/
-test analysis                   # test algomodel
-test export                     # export algomodel to dist/
+# load DATA_SAMPLE.py in lib/data/
+data module DATA_SAMPLE
+# load KERAS_NN_SAMPLE.py in lib/model/
+model module KERAS_NN_SAMPLE
+# load KERAS_NN_SAMPLE.py in lib/test/
+test module KERAS_NN_SAMPLE
+# load RAWSAMPLE folder in data/raw/
+data raw RAWSAMPLE
+# create dataset from raw
+data create
+# save datasets to data/DATA_SAMPLE/
+data save 0.25 0.25
+# share dataset to model module
+data to model
+# share dataset to test module
+data to test
+# create model
+model create
+# compile model
+model compile
+# train model & save to model/tmp
+model fit
+# share model to test module
+model to test
+# run model test
+test run
+# save model to model/
+test save
+# test algomodel
+test analysis
+# export algomodel to dist/
+test export
