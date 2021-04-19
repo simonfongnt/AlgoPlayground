@@ -91,10 +91,10 @@ The list of default commands, for main, script and threads, are as follows:
 | | | [save](COMMAND.md#save) | [save](COMMAND.md#save) | [save](COMMAND.md#save) |
 | | | [load](COMMAND.md#load) | [load](COMMAND.md#load) | [load](COMMAND.md#load) |
 | | | | [init](COMMAND.md#init) | [init](COMMAND.md#init) |
-| | | [to](COMMAND.md#load) | [to](COMMAND.md#load) | |
+| | | [to](COMMAND.md#to) | [to](COMMAND.md#to) | |
 | | | [raws](COMMAND.md#raws) | [compile](COMMAND.md#compile) | [run](COMMAND.md#run) |
 | | | [raw](COMMAND.md#raw) | [fit](COMMAND.md#fit) | [analysis](COMMAND.md#analysis) |
-| | | [create](COMMAND.md#create) | | [export](COMMAND.md#load) |
+| | | [create](COMMAND.md#create) | | [export](COMMAND.md#export) |
 
 
 ### Scripts
