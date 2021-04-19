@@ -127,7 +127,7 @@ lib/test:
 ...
 ```
 2. Use `model module 1` to load the example module
-3. [Create / Load Datasets](./lib/data/README.md)
+3. [Create / Load Datasets](~/lib/data/README.md)
 4. Use `data save 0.25 0` to ensure no validate set exists
 5. Use `data to test` to obtain train set
 6. [Create / Load Model](./lib/test/README.md)
