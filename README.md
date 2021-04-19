@@ -96,7 +96,7 @@ The list of default commands, for main, script and threads, are as follows:
 | | | [raw](COMMAND.md#raw) | [fit](COMMAND.md#fit) | [analysis](COMMAND.md#analysis) |
 | | | [create](COMMAND.md#create) | | [export](COMMAND.md#export) |
 
-Apart from the default commands, commands can also be defined inside a module. Please read [customized commands](COMMAND.md#Customized Commands) for more info.
+Apart from the default commands, commands can also be defined inside a module. Please read [customized commands](COMMAND.md#Customized-Commands) for more info.
 
 ### Scripts
 Script is a set of commands. 
