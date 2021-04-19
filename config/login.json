@@ -1,6 +1,6 @@
 {
     "telegram": {
-        "Enable": true,
+        "Enable": false,
         "token": "9999999999:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         "botname": "@XxxxxxxxxBot",
         "authgroup": -9999999

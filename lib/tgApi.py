@@ -16,6 +16,7 @@ class tgApi(Thread):
             self, 
             thQueue, 
             mpQueue,
+            enable,
             token, 
             botname, 
             authgroup, 
@@ -29,6 +30,7 @@ class tgApi(Thread):
         self.mpQueue    = mpQueue
         self.update_id  = None
         self.authgroup  = authgroup
+        self.enable     = enable 
         self.TOKEN      = token 
         self.botname    = botname
         # # Telegram Bot Authorization Token
@@ -128,7 +130,8 @@ class tgApi(Thread):
                 and self.mpQueue[self.itag].empty()
                     ):
 #                print ('telegram queue is empty...')
-                self.cycle()
+                if self.enable:
+                    self.cycle()
                 time.sleep(1)                           # optional heartbeat
                 
             elif not self.thQueue[self.itag].empty():   
@@ -156,22 +159,24 @@ class tgApi(Thread):
             self,
             cmds,
             ):
-        if (
-                '.png' in cmds
-            or  '.jpg' in cmds
-                ):
-            self.bot.send_photo(chat_id = self.authgroup, photo=open(cmds, 'rb'), timeout=100)
-        else:
-            idx = len(cmds)
-            # divide msg based on string limit if possible
-            while(len(cmds) >= self.strMaxLen):
-                idx     = self.strMaxLen
-                # search for newline
-                while cmds[idx] != '\n':
-                    idx = idx - 1                        
+        
+        if self.enable:
+            if (
+                    '.png' in cmds
+                or  '.jpg' in cmds
+                    ):
+                self.bot.send_photo(chat_id = self.authgroup, photo=open(cmds, 'rb'), timeout=100)
+            else:
+                idx = len(cmds)
+                # divide msg based on string limit if possible
+                while(len(cmds) >= self.strMaxLen):
+                    idx     = self.strMaxLen
+                    # search for newline
+                    while cmds[idx] != '\n':
+                        idx = idx - 1                        
+                    self.bot.send_message(chat_id = self.authgroup, text = cmds[:idx])
+                    cmds = cmds[idx:]                    
                 self.bot.send_message(chat_id = self.authgroup, text = cmds[:idx])
-                cmds = cmds[idx:]                    
-            self.bot.send_message(chat_id = self.authgroup, text = cmds[:idx])
 
     def thPrompt(self):
         try:

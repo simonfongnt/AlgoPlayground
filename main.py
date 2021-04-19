@@ -128,6 +128,7 @@ def main(
     ths['tgApi']        = tgApi(
                                     thQueue     = thcmds, 
                                     mpQueue     = mpcmds, 
+                                    enable      = loginJson['telegram']['Enable'],
                                     token       = loginJson['telegram']['token'],
                                     botname     = loginJson['telegram']['botname'], 
                                     authgroup   = loginJson['telegram']['authgroup'],

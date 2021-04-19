@@ -1,5 +1,5 @@
 {
-	"login": 		"config/secret/login.json",
+	"login": 		"config/login.json",
 	"logpath": 		[
 		"log",
 		"%s.log"

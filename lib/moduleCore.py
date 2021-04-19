@@ -24,7 +24,7 @@ class ModuleBase():
         self.xprint     = None
         self.miscroot   = None
 
-    # convert any fucking variable to string format
+    # convert any variable to string format
     def var2str(self, *text):
         return ' '.join(str(x) for x in [*text])
 
