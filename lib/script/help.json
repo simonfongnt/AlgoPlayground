@@ -51,11 +51,7 @@
         "INFO:",
         "kill running thread",
         "USAGE:",
-        "script kill target",
-        "Target:",
-        "data               data thread",
-        "model              model thread",
-        "test               test thread",
+        "kill data|model|test",
         ""
     ]
 }

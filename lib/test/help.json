@@ -12,11 +12,10 @@
         "-L, list           display list of models",
         "-l, load           load model",
         "-i, init           initialize test",
-        "-t, test           test model",
+        "-r, run            test model",
         "-a, analysis       analysis AlgoModel",
         "-e, export         export AlgoModel",
         "info               display module info",
-        "run                perform model test",
         "                   other unspecified options are sent to the loaded module",
         "Source:",
         "<index>            index of list command",
@@ -29,7 +28,7 @@
         "INFO:",
         "display list of module in lib.test directory",
         "USAGE:",
-        "test -M|modules",
+        "test -M|modules [subdirectory...]",
         "OUTPUT:",
         "index:path         list of module path with reference index",
         "Source:",
@@ -41,7 +40,7 @@
         "INFO:",
         "import module (last module without source) from lib.test directory",
         "USAGE:",
-        "test -m|module [source]",
+        "test -m|module [subdirectory...] [source]",
         "Source:",
         "<index>            <index> of modules command result",
         "<file>             specific module file name in lib.test directory",
@@ -85,11 +84,11 @@
         "test -i|init",
         ""
     ],
-    "test":[
+    "run":[
         "INFO:",
         "perform model test",
         "USAGE:",
-        "test -t|test",
+        "test -r|run",
         ""
     ],
     "info":[
@@ -113,14 +112,6 @@
         "test -e|export [operation...]",
         "Operation:",
         "<parameters>       fine-tune parameters",
-        ""
-    ],
-    "run":[
-        "INFO:",
-        "model test with default setting",
-        "included initialization, testing and saving",
-        "USAGE:",
-        "test run",
         ""
     ]
 }

@@ -16,7 +16,6 @@
         "-f, fit            fit model",
         "-t, to             send model to other function",
         "info               display module info",
-        "run                perform model training",
         "                   other unspecified options are sent to the loaded module",
         "Source:",
         "<index>            index of list command",
@@ -29,7 +28,7 @@
         "INFO:",
         "display list of module in lib.model directory",
         "USAGE:",
-        "model -M|modules",
+        "model -M|modules [subdirectory...]",
         "OUTPUT:",
         "index:path         list of module path with reference index",
         "Source:",
@@ -41,7 +40,7 @@
         "INFO:",
         "import module (last module without source) from lib.model directory",
         "USAGE:",
-        "model -m|module [source]",
+        "model -m|module [subdirectory...] [source]",
         "Source:",
         "<index>            <index> of modules command result",
         "<file>             specific module file name in lib.model directory",
@@ -101,11 +100,9 @@
     ],
     "to":[
         "INFO:",
-        "send model path in model.tmp directory to other function",
+        "send model path in model.tmp directory to test thread",
         "USAGE:",
-        "model -t|to function",
-        "function:",
-        "test               test function",
+        "model -t|to test",
         ""
     ],
     "info":[
@@ -113,15 +110,6 @@
         "display info hardcoded in module",
         "USAGE:",
         "model info",
-        ""
-    ],
-    "run":[
-        "INFO:",
-        "train the model with default setting",
-        "including initialization, creation, compile and fitting",
-        "then pass the trained model to test function",
-        "USAGE:",
-        "model run",
         ""
     ]
 }

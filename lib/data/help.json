@@ -16,7 +16,6 @@
         "-t, to             send dataset to other function",
         "-c, create         create dataset from raw",
         "info               display module info",
-        "run                convert raw data to dataset",
         "                   other unspecified options are sent to the loaded module",
         "Source:",
         "<index>            index of list command",
@@ -29,7 +28,7 @@
         "INFO:",
         "display list of module in lib.data directory",
         "USAGE:",
-        "data -M|modules",
+        "data -M|modules [subdirectory...]",
         "OUTPUT:",
         "index:path         list of module path with reference index",
         "Source:",
@@ -41,7 +40,7 @@
         "INFO:",
         "import module (last module without source) from lib.data directory",
         "USAGE:",
-        "data -m|module [source]",
+        "data -m|module [subdirectory...] [source]",
         "Source:",
         "<index>            <index> of modules command result",
         "<file>             specific module file name in lib.data directory",
@@ -102,12 +101,9 @@
     ],
     "to":[
         "INFO:",
-        "send dataset to other function",
+        "Either send train set and validate set (if exists) to model thread, or send test set to test thread.",
         "USAGE:",
-        "data -t|to function",
-        "function:",
-        "model              model function",
-        "test               test function",
+        "data to model|test",
         ""
     ],
     "create":[
@@ -122,15 +118,6 @@
         "display info hardcoded in module",
         "USAGE:",
         "data info",
-        ""
-    ],
-    "run":[
-        "INFO:",
-        "dataset creation with default setting,",
-        "convert raw data to dataset and save it to data directory,",
-        "then pass the dataset to train and test functions.",
-        "USAGE:",
-        "data run",
         ""
     ]
 }
