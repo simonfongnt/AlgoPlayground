@@ -82,7 +82,7 @@ The list of default commands, for main and threads, are as follows:
 
 | | data | model | test |
 | --- | --- | --- | --- |
-| [kill](COMMAND.md#kill) | [modules](COMMAND.md#-M module) | [modules](COMMAND.md#-M module) | [modules](COMMAND.md#modules) |
+| [kill](COMMAND.md#kill) | [modules](COMMAND.md#modules) | [modules](COMMAND.md#modules) | [modules](COMMAND.md#modules) |
 | [script](COMMAND.md#script) | [module](COMMAND.md#module) | [module](COMMAND.md#module) | [module](COMMAND.md#module) |
 
 
