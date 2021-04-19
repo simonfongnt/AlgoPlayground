@@ -26,7 +26,8 @@ ioHub:scriptroot:   default directory of scripts
 `login.json` is currently just for telegram. Details can be obtained via [BotFather](https://core.telegram.org/bots) of Telegram.
 ```
 telegram:Enable:    true = Enable; false = Disable
-telegram:token:     true = Enable; false = Disable
-telegram:botname:   true = Enable; false = Disable
-telegram:authgroup: true = Enable; false = Disable
+telegram:token:     by BotFather
+telegram:botname:   by BotFather
+telegram:authgroup: via Telegram Web, replacing g to minus
 ```
+A authgroup value is required for the bot to respond. The authgroup can usually be obtained via the Telegram Web view. The value is at the end of the group chat link. e.g. `g98765432`, indicates the authgroup = `-98765432`
