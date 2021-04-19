@@ -47,7 +47,6 @@ class AlgoModel():
         }
         input_dict = {name: tf.convert_to_tensor([value]) for name, value in sample.items()}
         result = self.Model.predict(input_dict)[0]
-        print(mlist, result)
         if result > self.threshold:
             return True
         return False

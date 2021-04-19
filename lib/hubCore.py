@@ -94,7 +94,7 @@ class HubBase():
 
         self.ioText = ''
 
-    # convert any fucking variable to string format
+    # convert variable to string format
     def var2str(self, *text):
         # # print(
         # #     text[0],
