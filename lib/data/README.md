@@ -49,7 +49,7 @@ class Data(
         self.dataPack   = {}
 ```
 ## Give and Take
-Data Thread passes numbers of parameters to the mobules and expects specific parameters for Model & Test threads.
+Data Thread passes numbers of parameters to the loaded mobule and expects specific parameters for Model & Test threads.
 ```
 Core Params:
 self.filepath       # string, module path
@@ -59,12 +59,19 @@ self.classname      # string, class name of the module
 Available Functions:
 self.xprint()       # display on console and messenger api
                     # e.g. self.xprint('123', '234')
+                    
+Available Params:
+self.miscroot       # directory of the miscellaneous root
+self.filePrefix     # suggested filename prefix in format <module name>-<thread name>-<timestamp>-
 
 Expected Params:
 self.x              # dataframe, computed features 
 self.y              # dataframe, computed target
 self.dataPack       # dictionary, to Model & Test thread modules
 ```
+`Core params` must be defined and `Expected params` should be produced in the module. After the module is loaded, the `self.xprint()` function can be used and miscellaneous storage path (`self.miscroot`) plus the suggested filename prefix (`self.filePrefix`) are also generated.
+
+For example, the `KERAS_NN_SAMPLE.py` `model` module can optionally use `self.miscroot` ([`misc/KERAS_NN_SAMPLE` folder](misc/KERAS_NN_SAMPLE)) and `self.filePrefix` (`KERAS_NN_SAMPLE-Model-1618448689-`) for better file organization.
 
 ## Example: create datasets
 `DATA_SAMPLE.py` uses the raw data at `data/raw/RAWSAMPLE/ABC.csv`.
