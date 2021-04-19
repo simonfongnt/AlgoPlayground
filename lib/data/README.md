@@ -71,7 +71,7 @@ self.dataPack       # dictionary, to Model & Test thread modules
 ```
 `Core params` must be defined and `Expected params` should be produced in the module. After the module is loaded, the `self.xprint()` function can be used and miscellaneous storage path (`self.miscroot`) plus the suggested filename prefix (`self.filePrefix`) are also generated.
 
-For example, the `KERAS_NN_SAMPLE.py` `model` module can optionally use `self.miscroot` ([`misc/KERAS_NN_SAMPLE`](misc/README.md) folder) and `self.filePrefix` (`KERAS_NN_SAMPLE-Model-1618448689-`) for better file organization.
+For example, the `KERAS_NN_SAMPLE.py` `model` module can optionally use `self.miscroot` ([`misc/KERAS_NN_SAMPLE`](misc) folder) and `self.filePrefix` (`KERAS_NN_SAMPLE-Model-1618448689-`) for better file organization.
 
 ## Example: create datasets
 `DATA_SAMPLE.py` uses the raw data at `data/raw/RAWSAMPLE/ABC.csv`.
