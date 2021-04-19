@@ -229,7 +229,7 @@ class Model(
                 ""
             ],
     }
-        
+    # customized commands
     def Command(
         self,
         cmds,
@@ -274,6 +274,12 @@ INFO:
 KERAS_NN_SAMPLE.py
 USAGE:
 test option [source] [operation]
+
+>model summary help
+INFO:
+show summary.
+USAGE:
+test summary
 ```
 then the command can simply be used
 ```
