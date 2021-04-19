@@ -107,32 +107,32 @@ passes loaded dataset(s) and model to the loaded module.
 ## save
 Threads have `save` command with different functionality:
 
-> data -s|save [subdirectory...]
+> data -s|save traintestpc trainvalpc
 
-save datasets in `data/` directory (if not specified) or its subdirectory
+save datasets in `data/` directory (if not specified). traintestpc proportion of the dataset to include in the train-test split; trainvalpc proportion of the dataset to include in the train-validate split
 
-> model -s|save [subdirectory...]
+> model -s|save
 
-save model in `model/` directory (if not specified) or its subdirectory
+save model in `model/` directory (if not specified)
 
-> test -s|save [subdirectory...]
+> test -s|save
 
-save model in `model/` directory (if not specified) or its subdirectory
+save model in `model/` directory (if not specified)
 
 ## load
 Threads have `load` command with different functionality:
 
-> data -l|load [subdirectory...]
+> data -l|load
 
-load datasets in `data/` directory or its subdirectory, which can be index of `data list` command.
+load datasets in `data/` directory, which can be index of `data list` command.
 
-> model -l|load [subdirectory...]
+> model -l|load
 
-load model in `model/` directory or its subdirectory, which can be index of `model list` command.
+load model in `model/` directory, which can be index of `model list` command.
 
-> test -l|load [subdirectory...]
+> test -l|load
 
-load model in `model/` directory or its subdirectory, which can be index of `test list` command.
+load model in `model/` directory, which can be index of `test list` command.
 
 ## to
 Threads have `to` command with different functionality:
