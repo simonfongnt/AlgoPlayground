@@ -33,13 +33,15 @@ list of models in `model/` directory or its subdirectory.
 
 list of models in `model/` directory or its subdirectory.
 
-# Script Commands
-
 ## run
 
 > script run [source]
 
 execute script (last script without source) from `script/` directory or its subdirectory.
+
+> test -r|run
+
+test the model
 
 # Thread Commands
 The following commands are for threads only.
@@ -191,11 +193,6 @@ train the model
 
 
 # Test Thread Commands
-## test
-
-> test -t|test
-
-test the model
 
 ## analysis
 
