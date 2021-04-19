@@ -6,7 +6,7 @@ Model Test modules are located in this folder `lib/test/`.
 
 Test Thread handles import of these modules by `test module` command. For more infomation, Use `test help` or read this (pending).
 
-Basically, class `Raw` and `Create` are essential during the development.
+Basically, class `Run` and `Export` are essential during the development.
 
 ## Model module (Model Trainning) Class Format
 `lib.moduleCore.ModelBase` must be inherited in `class Model`. The mininal template is defined as follows:
@@ -111,7 +111,11 @@ Available Params:
 self.x_test         # train set features dataframe
 self.y_test         # validate set features dataframe
 ```
-It is recommended to export the Algomodel consisted of the trained model by the `Export` function.
+`Core params` must be defined and `Expected params` should be produced in the module. After the module is loaded, the `self.xprint()` function can be used and miscellaneous storage path (`self.miscroot`) plus the suggested filename prefix (`self.filePrefix`) are also generated.
+
+For example, the `KERAS_NN_SAMPLE.py` `model` module can optionally use `self.miscroot` ([`misc/KERAS_NN_SAMPLE`](misc) folder) and `self.filePrefix` (`KERAS_NN_SAMPLE-Model-1618448689-`) for better file organization.
+
+It is also recommended to export the Algomodel consisted of the trained model by the `Export` function.
 
 ## Example: test a model
 `SKLEARN_SVC_SAMPLE.py` uses the dataset from `DATA_SAMPLE.py` Data thread module and the trained model from `SKLEARN_SVC_SAMPLE.py` Model thread module.
