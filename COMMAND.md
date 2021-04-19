@@ -1,12 +1,13 @@
 # Commands
 commands are available for each threads shown as follows:
 
-## modules
+## -M modules
 display list of module with index in specific directory
 
 | Thread | data | model | test |
 | --- | --- | --- | --- |
 | directory | lib/data/ | lib/model/ | lib/test/ |
+
 e.g. 
 ```
 > model modules
@@ -16,15 +17,12 @@ lib/model:
 3:lib/model/KERAS_NN_SAMPLE.py
 ```
 
-## -M module
+## -m module
 display list of module with index in specific directory
 
-| Thread | data | model | test |
-| --- | --- | --- | --- |
-| directory | lib/data/ | lib/model/ | lib/test/ |
 e.g. 
 ```
-> model modules
+> model module
 lib/model:
 ...
 2:lib/model/SKLEARN_SVC_SAMPLE.py
