@@ -86,7 +86,7 @@ self.modelPack      # optional dictionary to Test thread module
 ```
 `Core params` must be defined and `Expected params` should be produced in the module. After the module is loaded, the `self.xprint()` function can be used and miscellaneous storage path (`self.miscroot`) plus the suggested filename prefix (`self.filePrefix`) are also generated.
 
-For example, the `KERAS_NN_SAMPLE.py` `model` module can optionally use `self.miscroot` ([`misc/KERAS_NN_SAMPLE`](misc) folder) and `self.filePrefix` (`KERAS_NN_SAMPLE-Model-1618448689-`) for better file organization.
+For example, the `KERAS_NN_SAMPLE.py` `model` module can optionally use `self.miscroot` ([`misc/KERAS_NN_SAMPLE`](../../misc) folder) and `self.filePrefix` (`KERAS_NN_SAMPLE-Model-1618448689-`) for better file organization.
 
 ## Example: create and train a model
 `SKLEARN_SVC_SAMPLE.py` uses the dataset from `DATA_SAMPLE.py` Data thread module.
@@ -98,7 +98,7 @@ lib/model:
 ...
 ```
 2. Use `model module 2` to load the example module
-3. [Create / Load Datasets](lib/data/README.md)
+3. [Create / Load Datasets](../data/README.md)
 4. Use `data save 0.25 0` to ensure no validate set exists
 5. Use `data to model` to obtain train set
 6. Use `model create` to create the model (optional)
