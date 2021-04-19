@@ -126,7 +126,7 @@ lib/test:
 1:lib/test/SKLEARN_SVC_SAMPLE.py
 ...
 ```
-2. Use `[model module](COMMAND.md#modules) 1` to load the example module
+2. Use [model module](COMMAND.md#modules) 1 to load the example module
 3. [Create / Load Datasets](lib/data/README.md)
 4. Use `[data save](COMMAND.md#save) 0.25 0` to ensure no validate set exists
 5. Use `[data to](COMMAND.md#to) test` to obtain train set
