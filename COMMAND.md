@@ -206,3 +206,83 @@ analysis algomodel consisted of the trained model
 
 export the algomodel consisted of the trained model to `dist/` or its subdirectory
 
+# Customized Commands
+Apart from the default, command can also be defined inside a module. It is recommended to use the `helpinfo` to describe the commands as well. Let's take model module `KERAS_NN_SAMPLE.py` as an example:
+```
+class Model(
+    ModelBase,
+    ):
+    # model help ...
+    helpinfo = {
+        "help":[
+                "INFO:",
+                filename,
+                "USAGE:",
+                "test option [source] [operation]",
+                ""
+            ],
+        "summary":[
+                "INFO:",
+                'show summary.',
+                "USAGE:",
+                "test summary",
+                ""
+            ],
+    }
+    # customized commands
+    def Command(
+        self,
+        cmds,
+        ):
+        if (
+            cmds[0] == 'summary'
+            ):            
+            self.xprint(
+                'print Summary'
+                )
+        return
+    ......
+```
+commands will be passed to `Command` function by Model thread if it is not default command. Now `model help` command will the module command list shown at the end as follows:
+```
+>model module KERAS_NN_SAMPLE
+>model help
+INFO:
+model creation
+USAGE:
+model option [source] [operation]
+Option:
+-h, help           display this file
+-M, modules        display list of modules
+-m, module         import module
+-s, save           save model
+-L, list           display list of models
+-l, load           load model
+-i, init           initialize model
+-c, compile        compile model
+-f, fit            fit model
+-t, to             send model to other function
+info               display module info
+                   other unspecified options are sent to the loaded module
+Source:
+<index>            index of list command
+<file>             actual filename
+Operation:
+-h, help           display help for option
+
+INFO:
+KERAS_NN_SAMPLE.py
+USAGE:
+test option [source] [operation]
+
+>model summary help
+INFO:
+show summary.
+USAGE:
+test summary
+```
+then the command can simply be used
+```
+>model summary
+print Summary
+```
