@@ -113,7 +113,7 @@ self.y_test         # validate set features dataframe
 ```
 `Core params` must be defined and `Expected params` should be produced in the module. After the module is loaded, the `self.xprint()` function can be used and miscellaneous storage path (`self.miscroot`) plus the suggested filename prefix (`self.filePrefix`) are also generated.
 
-For example, the `KERAS_NN_SAMPLE.py` `model` module can optionally use `self.miscroot` ([`misc/KERAS_NN_SAMPLE`](misc) folder) and `self.filePrefix` (`KERAS_NN_SAMPLE-Model-1618448689-`) for better file organization.
+For example, the `KERAS_NN_SAMPLE.py` `model` module can optionally use `self.miscroot` ([`misc/KERAS_NN_SAMPLE`](../../misc) folder) and `self.filePrefix` (`KERAS_NN_SAMPLE-Model-1618448689-`) for better file organization.
 
 It is also recommended to export the Algomodel consisted of the trained model by the `Export` function.
 
@@ -127,10 +127,10 @@ lib/test:
 ...
 ```
 2. Use `model module 1` to load the example module
-3. [Create / Load Datasets](../../lib/data/README.md)
+3. [Create / Load Datasets](..//data/README.md)
 4. Use `data save 0.25 0` to ensure no validate set exists
 5. Use `data to test` to obtain train set
-6. [Create / Load Model](../../lib/test/README.md)
+6. [Create / Load Model](../test/README.md)
 7. Use `model to test` to obtain trained model
 8. Use `test run` to start testing
 9. Use `test analysis` to verify Algomodel functions (optional)
