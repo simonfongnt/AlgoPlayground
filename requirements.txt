@@ -1,0 +1,7 @@
+tensorflow
+pandas
+python-telegram-bot
+scikit-learn
+sqlalchemy
+matplotlib
+pyarrow
