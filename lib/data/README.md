@@ -4,7 +4,7 @@ Data processing modules are located in this folder `lib/data/` and the raw data 
 > 1. Raw data at `data/raw/`
 >     - e.g. `data/raw/RAWSAMPLE/ABC.csv``
 
-Data Thread handles import of these modules by `data module` command. For more infomation, Use `data module help` or read this (pending).
+Data Thread handles import of these modules by `data module` command. For more infomation, Use `data help` or read this (pending).
 
 Basically, class `Raw` and `Create` are essential during the development.
 
@@ -89,24 +89,13 @@ data/raw:
 8. Use `data to test` to pass the test set to Test thread
 > NOTE: `data to` requires modules to be loaded in target threads.
 
-## Example: load existing datasets
-Assume the datasets have been created by `DATA_SAMPLE.py`, the existing datasets can be reused.
-1. Use `data modules` to list the data module
-```
-lib/data:
-0:lib/data/DATA_SAMPLE.py
-```
-2. Use `data module 0` to load the example module
-3. Use `data list` to list the dataset directories in `data/`
+### Optional: load existing datasets
+Assume the datasets have been created by `DATA_SAMPLE.py`, the existing datasets can be reused by replacing step 4-6 to:
+- Use `data list` to list the dataset directories in `data/`
 ```
 data:
 ...
 4:data/DATA_SAMPLE
 ...
 ```
-4. Use `data load 4` to load the previous train set, validate set and test set files
-5. Use `data create` to compute `self.x`, `self.y` and `self.dataPack`
-6. Use `data save` to create train set, validate set and test set files in `data/`
-7. Use `data to model` to pass the train set & validate set to Model thread
-8. Use `data to test` to pass the test set to Test thread
-> NOTE: `data to` requires modules to be loaded in target threads.
+- Use `data load 4` to load the previous train set, validate set and test set files

@@ -1,10 +1,10 @@
 # Model Thread Modules
 
-Model Trainning modules are located in this folder `lib/model/`.
+Model Training modules are located in this folder `lib/model/`.
 > 3. model training code at `lib/model/`
 >     - e.g. `lib/model/KERAS_NN_SAMPLE.py`
 
-Model Thread handles import of these modules by `model module` command. For more infomation, Use `model module help` or read this (pending).
+Model Thread handles import of these modules by `model module` command. For more infomation, Use `model help` or read this (pending).
 
 Basically, class `Raw` and `Create` are essential during the development.
 
@@ -100,21 +100,13 @@ lib/model:
 7. Use `model compile` to compile the model (optional)
 8. Use `model fit` to train the model and save to `model/tmp`
 
-## Example: load existing model
-`SKLEARN_SVC_SAMPLE.py` uses the dataset from `DATA_SAMPLE.py` Data thread module.
-1. Use `model modules` to list the data module
-```
-lib/model:
-...
-2:lib/model/SKLEARN_SVC_SAMPLE.py
-...
-```
-2. Use `model module 2` to load the example module
-3. Use `model list` to create the model (optional)
+### Optional: load existing model
+Existing model can be loaded for training by replacing step 6 to:
+- Use `model list` list the models in `model/`
 ```
 model:
 ...
 4:model/SKLEARN_SVC_SAMPLE
 ...
 ```
-4. Use `model load 4` to load previous trained and tested model in `data/`
+- Use `model load 4` to load previous trained and tested model in `model/`
