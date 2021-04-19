@@ -8,7 +8,7 @@ Data Thread handles import of these modules by `data module` command. For more i
 
 Basically, class `Raw` and `Create` are essential during the development.
 
-## Data module (Data Processing) Class Format
+## Module Class Format
 `lib.moduleCore.DataBase` must be inherited in `class Data`. The mininal template is defined as follows:
 ```
 from lib.moduleCore import DataBase
