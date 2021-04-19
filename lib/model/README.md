@@ -6,9 +6,9 @@ Model Training modules are located in this folder `lib/model/`.
 
 Model Thread handles import of these modules by `model module` command. For more infomation, Use `model help` or read this (pending).
 
-Basically, class `Raw` and `Create` are essential during the development.
+Basically, class `Create`, `Compile` and `Fit` are essential during the development.
 
-## Model module (Model Trainning) Class Format
+## Module Class Format
 `lib.moduleCore.ModelBase` must be inherited in `class Model`. The mininal template is defined as follows:
 ```
 from lib.moduleCore import ModelBase
@@ -72,6 +72,8 @@ self.xprint()       # display on console and messenger api
                     # e.g. self.xprint('123', '234')
 
 Available Params:
+self.miscroot       # directory of the miscellaneous root
+self.filePrefix     # suggested filename prefix in format <module name>-<thread name>-<timestamp>-
 self.x_train        # train set features dataframe
 self.x_val          # validate set features dataframe
 self.y_train        # train set target dataframe
@@ -82,6 +84,9 @@ Expected Params:
 self.model          # trained model
 self.modelPack      # optional dictionary to Test thread module
 ```
+`Core params` must be defined and `Expected params` should be produced in the module. After the module is loaded, the `self.xprint()` function can be used and miscellaneous storage path (`self.miscroot`) plus the suggested filename prefix (`self.filePrefix`) are also generated.
+
+For example, the `KERAS_NN_SAMPLE.py` `model` module can optionally use `self.miscroot` ([`misc/KERAS_NN_SAMPLE`](misc) folder) and `self.filePrefix` (`KERAS_NN_SAMPLE-Model-1618448689-`) for better file organization.
 
 ## Example: create and train a model
 `SKLEARN_SVC_SAMPLE.py` uses the dataset from `DATA_SAMPLE.py` Data thread module.
