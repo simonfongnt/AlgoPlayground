@@ -126,15 +126,15 @@ lib/test:
 1:lib/test/SKLEARN_SVC_SAMPLE.py
 ...
 ```
-2. Use [model module](COMMAND.md#modules) 1 to load the example module
+2. Use `model module 1` to load the example module
 3. [Create / Load Datasets](lib/data/README.md)
-4. Use `[data save](COMMAND.md#save) 0.25 0` to ensure no validate set exists
-5. Use `[data to](COMMAND.md#to) test` to obtain train set
+4. Use `data save 0.25 0` to ensure no validate set exists
+5. Use `data to test` to obtain train set
 6. [Create / Load Model](lib/test/README.md)
-7. Use `[model to](COMMAND.md#to) test` to obtain trained model
-8. Use `[test run](COMMAND.md#run)` to start testing
-9. Use `[test analysis](COMMAND.md#analysis)` to verify Algomodel functions (optional)
-10. Use `[test export](COMMAND.md#export)` to export Algomodel to `dist/`
+7. Use `model to test` to obtain trained model
+8. Use `test run` to start testing
+9. Use `test analysis` to verify Algomodel functions (optional)
+10. Use `test export` to export Algomodel to `dist/`
 
 ### Optional: load existing model
 Existing model can be loaded for testing by replacing step 6-7 to:
@@ -145,4 +145,4 @@ model:
 3:model/SKLEARN_SVC_SAMPLE
 ...
 ```
-- Use `[test load](COMMAND.md#load) 3` to load previous trained and tested model in `model/`
+- Use `test load 3` to load previous trained and tested model in `model/`
