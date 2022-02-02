@@ -10,6 +10,7 @@ scikit-learn
 sqlalchemy
 matplotlib
 pyarrow
+feather-format
 ```
 Either install it manually or run:
 > pip install -r requirements.txt
